@@ -159,7 +159,7 @@ AI_BOOKING_COPILOT/
 │   ├── payment.py
 │   ├── pdf_generator.py
 │   ├── dashboard.html
-│   └── quotes/
+│   
 │
 ├── extension/
 │   ├── manifest.json
@@ -298,10 +298,13 @@ AI-Powered Travel Automation
 
 ---
 
-# 👨‍💻 Author
+# Team - 404 Found
 
 Roshni
-AI Travel Copilot Developer
+Full Stack AI Developer
+
+Piyush
+Frontend/Research 
 
 ---
 
