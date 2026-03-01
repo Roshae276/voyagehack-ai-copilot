@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+body {
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#fillBtn { background: white; color: #1e3a8a; }
+#micBtn { background: #22c55e; color: white; }
+
+#status {
+    margin-top: 8px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.spinner {
+    display: none;
+    margin: 8px auto;
+    border: 4px solid #ddd;
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Scrollable AI result section */
+.card {
+    margin-top: 12px;
+    background: white;
+    color: black;
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 12px;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.badge {
+    background: #facc15;
+    color: black;
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-size: 10px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h3>✈ VoyageHack AI Copilot</h3>
+
+<button id="fillBtn" class="btn">⚡ Auto-Fill</button>
+<button id="micBtn" class="btn">🎤 Speak Booking</button>
+
+<div class="spinner" id="spinner"></div>
+<div id="status">Ready...</div>
+
+<div class="card" id="aiData">
+AI suggestions will appear here.
+
+</div>
+<div id="actionButtons" style="margin-top:10px; display:none;">
+
+<button id="payBtn" class="btn" style="background:#22c55e;">
+💳 Pay Now
+</button>
+
+<button id="pdfBtn" class="btn" style="background:#3b82f6;">
+📄 Download User Quote
+</button>
+
+<button id="agentPdfBtn" class="btn" style="background:#f59e0b;">
+📊 Download Agent Report
+</button>
+
+<button id="waBtn" class="btn" style="background:#25D366;">
+📱 Send WhatsApp Quote
+</button>
+
+<button id="dashboardBtn" class="btn">
+📊 Analytics Dashboard
+</button>
+
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>

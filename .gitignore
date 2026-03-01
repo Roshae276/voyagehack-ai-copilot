@@ -1,0 +1,23 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# MongoDB local files
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Quotes PDF files
+backend/quotes/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log

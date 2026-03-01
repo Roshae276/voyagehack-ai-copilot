@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>VoyageHack Analytics Dashboard</title>
+
+<style>
+
+body {
+
+    font-family: Arial;
+
+    background: #f3f4f6;
+
+    padding: 30px;
+}
+
+.container {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+}
+
+h1 {
+
+    text-align: center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>VoyageHack Revenue Dashboard</h1>
+
+<div class="card" id="revenue">
+Loading revenue...
+</div>
+
+<div class="card" id="searches">
+Loading searches...
+</div>
+
+<div class="card" id="average">
+Loading average...
+</div>
+
+</div>
+
+<script>
+
+async function loadAnalytics() {
+
+    try {
+
+        const res = await fetch(
+            "http://127.0.0.1:8000/analytics-dashboard"
+        );
+
+        const data = await res.json();
+
+        document.getElementById(
+            "revenue"
+        ).innerText =
+            "Total Revenue: ₹" +
+            data.total_revenue;
+
+        document.getElementById(
+            "searches"
+        ).innerText =
+            "Total Searches: " +
+            data.total_searches;
+
+        document.getElementById(
+            "average"
+        ).innerText =
+            "Avg Revenue/Search: ₹" +
+            data.avg_revenue_per_search;
+
+    }
+
+    catch (e) {
+
+        alert("Dashboard failed to load");
+
+    }
+
+}
+
+loadAnalytics();
+
+</script>
+
+</body>
+</html>
