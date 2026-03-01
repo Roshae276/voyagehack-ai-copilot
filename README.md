@@ -54,8 +54,6 @@ Extract structured booking data from natural language.
 * Budget
 * AI insights
 
-### Screenshot
-
 ![AI Copilot Interface](screenshots/extension_main.png)
 
 ---
@@ -63,8 +61,6 @@ Extract structured booking data from natural language.
 ## 🏨 Commission-Optimized Hotel Search
 
 Shows hotels with commission insights.
-
-### Screenshot
 
 ![Hotel Commission Results](screenshots/hotel_commission.png)
 
@@ -79,8 +75,6 @@ Professional quotation PDF with:
 * Secure payment link
 * Commission hidden from customer
 
-### Screenshot
-
 ![Customer PDF](screenshots/user_report.png)
 
 ---
@@ -89,15 +83,7 @@ Professional quotation PDF with:
 
 Internal report showing commission breakdown and total earnings.
 
-### Screenshot
-
 ![Agent Commission Report](screenshots/agent_report.png)
-
----
-
-## 💳 Secure Payment Link Generation
-
-Instant payment link generation integrated into quotation workflow.
 
 ---
 
@@ -105,9 +91,7 @@ Instant payment link generation integrated into quotation workflow.
 
 Send quotation directly to customer via WhatsApp.
 
-### Screenshot
-
-![Extension Actions](screenshots/Whatsapp_Pay.png)
+![WhatsApp Integration](screenshots/Whatsapp_Pay.png)
 
 ---
 
@@ -118,8 +102,6 @@ Real-time analytics dashboard displaying:
 * Total revenue potential
 * Total searches
 * Average revenue per search
-
-### Screenshot
 
 ![Analytics Dashboard](screenshots/revenue_dashboard.png)
 
@@ -161,7 +143,7 @@ Integrations:
 
 * TBO Hotel API
 * TBO Flight API
-* WhatsApp API
+* WhatsApp Integration
 * Payment Link Generator
 
 ---
@@ -186,16 +168,37 @@ AI_BOOKING_COPILOT/
 │   └── content.js
 │
 ├── screenshots/
-│   ├── extension_main.png
-│   ├── extension_actions.png
-│   ├── hotel_commission.png
-│   ├── user_pdf.png
-│   ├── agent_report.png
-│   ├── payment_pdf.png
-│   ├── dashboard.png
 │
+├── .env.example
 └── README.md
 ```
+
+---
+
+# 🔐 Environment Setup (.env configuration)
+
+For security reasons, API keys are not included in this repository.
+
+Create a `.env` file in the project root using the provided `.env.example` file.
+
+## Step 1: Create .env file
+
+```
+cp .env.example .env
+```
+
+Or manually create `.env`
+
+## Step 2: Add your credentials
+
+Example `.env` file:
+
+```
+OPENAI_API_KEY=your_openai_api_key_here
+MONGO_URL=your_mongodb_connection_string_here
+```
+
+⚠️ Never commit your real `.env` file to GitHub.
 
 ---
 
@@ -205,7 +208,10 @@ AI_BOOKING_COPILOT/
 
 ```
 cd backend
-pip install -r requirements.txt
+Windows:
+venv\Scripts\activate
+Mac/Linux:
+source venv/bin/activate
 uvicorn main:app --reload
 ```
 
