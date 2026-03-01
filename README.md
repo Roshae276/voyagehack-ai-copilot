@@ -91,7 +91,7 @@ Internal report showing commission breakdown and total earnings.
 
 Send quotation directly to customer via WhatsApp.
 
-![WhatsApp Integration](screenshots/Whatsapp_Pay.png)
+![WhatsApp Integration](screenshots/whatsapp_Pay.png)
 
 ---
 
